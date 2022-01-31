@@ -83,6 +83,7 @@ main {
   text-align: center;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  margin-top: -.5rem;
 }
 
 .card-body h1 {
@@ -139,6 +140,14 @@ main {
 .payment-plan a{
     text-decoration: underline;
     color: var(--Bright-blue);
+    font-weight: 900;
+    font-size: 12px;
+    flex: 1;
+}
+
+.payment-plan a:hover{
+  text-decoration: none;
+  color: var(--Desaturated-blue);
 }
 
 .btn-group{
@@ -160,8 +169,17 @@ main {
 .btn-proceed{
     background-color: var(--Bright-blue);
     color: var(--Very-pale-blue);
+    box-shadow: 0px 10px 10px 0px hsla(0, 0%, 50%, 0.281);
+}
+
+.btn-proceed:hover{
+  opacity: .5;
 }
 
 .btn-cancel{
     color: var(--Desaturated-blue);
+}
+
+.btn-cancel:hover{
+  color: var(--Dark-blue);
 }
