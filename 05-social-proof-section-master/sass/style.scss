@@ -1,0 +1,50 @@
+@import 'fonts';
+@import 'reset';
+@import 'variables';
+@import 'footer';
+
+main,
+.testimonials{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px){
+    main{
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .testimonials{
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: span 2;
+    }
+}
+
+h1{
+    color: $very-dark-magenta;
+    font-weight: 700;
+}
+
+p{
+    color: $dark-grayish-magenta;
+}
+
+li{
+    background-color: $dark-grayish-magenta;
+}
+
+// testimonials 
+
+article{
+    background-color: $very-dark-magenta;
+
+    h4{
+        font-weight: 700;
+    }
+    span{
+        color: $soft-pink;
+    }
+    p, h4{
+        color: $white;
+    }
+}
