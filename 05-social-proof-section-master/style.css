@@ -27,22 +27,14 @@ ul {
   color: #3e52a3;
 }
 
-main,
-.testimonials {
+main {
   display: grid;
   grid-template-columns: 1fr;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 6rem;
 }
 
-@media (min-width: 860px) {
-  main {
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .testimonials {
-    grid-template-columns: repeat(3, 1fr);
-    grid-column: span 2;
-  }
-}
 h1 {
   color: #502050;
   font-weight: 700;
@@ -53,11 +45,66 @@ p {
 }
 
 li {
-  background-color: #937b92;
+  background-color: #f7f2f7;
+}
+
+.presentation {
+  text-align: center;
+  padding: 0;
+}
+.presentation h1 {
+  font-size: 2.5rem;
+}
+.presentation p {
+  margin-top: 1rem;
+  line-height: 1.5em;
+}
+
+.ratings ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.ratings ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+.ratings ul li span {
+  color: #502050;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  margin-top: 2rem;
 }
 
 article {
   background-color: #502050;
+  border-radius: 0.5rem;
+  padding: 3rem;
+}
+article header {
+  display: flex;
+  align-items: center;
+}
+article .subject {
+  margin-left: 2rem;
+}
+article .subject span {
+  margin-top: 0.5rem;
+}
+article img {
+  border-radius: 50%;
+  width: 3rem;
 }
 article h4 {
   font-weight: 700;
@@ -67,6 +114,50 @@ article span {
 }
 article p, article h4 {
   color: white;
+}
+article p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 860px) {
+  main {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .presentation {
+    text-align: left;
+    max-width: 70%;
+  }
+
+  .ratings ul li {
+    max-width: 70%;
+    text-align: left;
+    flex-direction: row;
+  }
+  .ratings ul li:nth-child(2) {
+    margin-left: 2.5rem;
+  }
+  .ratings ul li:nth-child(3) {
+    margin-left: 5rem;
+  }
+  .ratings ul li span {
+    margin-left: 2rem;
+  }
+
+  .testimonials {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+    column-gap: 1.8rem;
+    margin-top: 5rem;
+  }
+  .testimonials article:nth-child(2) {
+    margin-top: 1rem;
+  }
+  .testimonials article:nth-child(3) {
+    margin-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
